@@ -1,0 +1,6 @@
+pack/models/Book.class
+pack/Application.class
+pack/models/Author.class
+pack/daos/AuthorDao.class
+pack/controllers/BookController.class
+pack/daos/BookDao.class

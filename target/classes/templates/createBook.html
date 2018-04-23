@@ -1,0 +1,14 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+    <form th:action="@{/add}" method="post">
+        <input type="text" th:for="title"><br>
+        <input type="text" th:for="authorFirstName"><br>
+        <input  type="text" th:for="authorLastName"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
