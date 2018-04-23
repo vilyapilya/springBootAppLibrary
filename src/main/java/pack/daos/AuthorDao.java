@@ -12,5 +12,5 @@ import java.util.Optional;
 public interface AuthorDao extends CrudRepository<Author, Integer> {
 
     public Author findAuthorById(int id);
-    public Author findAuthorByFirstNameAndAndLastName(String firstName, String lastName);
+    public Author findAuthorByFirstNameAndLastName(String firstName, String lastName);
 }

@@ -7,8 +7,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class userController {
 
-    @RequestMapping(value="/add/user", method = RequestMethod.POST)
-    public String createUser(String userFirstName, String userLastName) {
-
-    }
 }
