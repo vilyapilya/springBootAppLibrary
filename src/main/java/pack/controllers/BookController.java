@@ -23,7 +23,7 @@ public class BookController {
     @Autowired
     private AuthorDao authorDao;
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/add/book", method = RequestMethod.POST)
     public String createBook(HttpServletRequest request, Model model) {
         String title = request.getParameter("title");
         String authorFirstName = request.getParameter("firstName");
@@ -56,11 +56,11 @@ public class BookController {
     }
 
    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ModelAndView showBook(@PathVariable("id") int id, Model model) {
+    public Book showBook(@PathVariable("id") int id, Model model) {
         int bookId = id;
         Book book = bookDao.findBookById(bookId);
         model.addAttribute("title", book.getTitle());
-        return new ModelAndView("showBook");
+        return book;
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
